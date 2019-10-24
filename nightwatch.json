@@ -23,7 +23,7 @@
         "browserName": "chrome",
         "acceptSslCerts": true,
         "chromeOptions" : {
-          "args" : ["--no-sandbox", "--disable-gpu", "--incognito"],
+          "args" : ["--no-sandbox", "--disable-gpu", "--incognito", "--window-size=1920,1080"],
           "binary" : ""
         }
       }
