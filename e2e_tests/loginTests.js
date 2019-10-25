@@ -11,7 +11,7 @@ module.exports = {
 
   'Login Test Positive': function(browser) {
     const input = {
-      username: '2773a5c09a-edca8c@inbox.mailtrap.io',
+      username: 'a@a.aa',
       password: 'Qwe123'
     };
     

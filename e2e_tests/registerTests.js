@@ -24,7 +24,7 @@ module.exports = {
     
     //Page elements
     const elements = {
-      textButtonRegister: '//a[contains(text(),"Don\'t have an account?")]',
+      textButtonRegister: 'a[href="/auth/register"]',
       fieldEmail: 'input[name="email"]',
       fieldPassword: 'input[name="password"]',
       fieldConfirmPassword: 'input[name="confirmPassword"]',
@@ -37,11 +37,9 @@ module.exports = {
     browser
       //Navigate to Register form
       .url(url)
-      .useXpath()
       .waitForElementVisible(elements.textButtonRegister, 5000, 'Website is loaded')
       .assert.urlContains('auth/login', 'You are on the Login page')
       .click(elements.textButtonRegister)
-      .useCss()
       .waitForElementVisible(elements.fieldEmail, 5000, 'Register page is loaded')
       .assert.urlContains('auth/register', 'You are on the Register page')
       .setValue(elements.fieldEmail, username + domain)
