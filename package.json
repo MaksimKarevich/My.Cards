@@ -17,34 +17,35 @@
   "dependencies": {
     "assertion-error": "^1.1.0",
     "chai-nightwatch": "^0.3.0",
-    "dotenv": "7.0.0",
+    "dotenv": "8.2.0",
     "ejs": "^2.7.1",
-    "lodash.clone": "3.0.3",
+    "lodash.clone": "4.5.0",
     "lodash.defaultsdeep": "^4.6.1",
     "lodash.merge": "^4.6.2",
     "minimatch": "3.0.4",
     "mkpath": "1.0.0",
-    "nw": "^0.41.2",
+    "npm-check-updates": "^3.2.0",
+    "nw": "^0.42.2",
     "optimist": "^0.6.1",
-    "proxy-agent": "^3.1.0",
+    "proxy-agent": "^3.1.1",
     "require.js": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chromedriver": "^76.0.1",
-    "coveralls": "^3.0.6",
-    "eslint": "^6.5.1",
-    "geckodriver": "^1.18.0",
+    "chromedriver": "^78.0.1",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "geckodriver": "^1.19.1",
     "js-yaml": "^3.13.1",
-    "mocha": "^5.2.0",
-    "mock-spawn": "^0.2.1",
+    "mocha": "^6.2.2",
+    "mock-spawn": "^0.2.6",
     "mockery": "~2.1.0",
-    "nock": "^10.0.6",
+    "nock": "^11.7.0",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2"
   },
   "optionalDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^6.2.2"
   },
   "bin": {
     "nightwatch": "./bin/nightwatch"
