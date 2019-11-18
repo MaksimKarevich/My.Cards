@@ -15,7 +15,7 @@ module.exports = {
   },
   
   'Register Tests Positive': function (browser) {
-    const url = 'http://localhost:3000/';
+    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
     const username = Date.now();
     const domain = '@domain.com';
     const input = {

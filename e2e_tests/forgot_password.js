@@ -15,10 +15,10 @@ module.exports = {
   
   'Forgot Password Test': function(browser) {
     const input = {
-      username: 'a@a.aa',
+      username: 'testythetester88@gmail.com',
     };
   
-    const url = 'http://localhost:3000/';
+    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
     const username = Date.now();
     const domain = '@domain.com';
     const elements = {
@@ -46,85 +46,71 @@ module.exports = {
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //missing address
       .setValue(elements.email, domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //missing domain
       .setValue(elements.email, username + '@')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //incorrect domain
       .setValue(elements.email, 'email@domain')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //last dot in address
       .setValue(elements.email, 'email.' + domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //double dot in address
       .setValue(elements.email, 'email..email' + domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //first dot in address
       .setValue(elements.email, '.' + username + domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //double @@
       .setValue(elements.email, 'email@domain' + domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //first dash in domain
       .setValue(elements.email, 'email@-domain.com')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //last dash in domain
       .setValue(elements.email, 'email@domain-.com')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //garbage
       .setValue(elements.email, 'te"(),:;<>@[\\]st@domain.com')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //copy-paste from address book
       .setValue(elements.email, 'Joe Smith <\email@domain.com>')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //superfluous text or spaces
       .setValue(elements.email, 'email@domain.com (comment)')
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is not valid')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //65 character email
       .setValue(elements.email, 'testtesttesttesttesttesttesttesttesttesttesttesttestte' + domain)
       .assert.attributeContains(elements.email, 'aria-invalid', 'true',
       'Email is too long (maximum is 64 characters)')
       .setValue(elements.email, ['', [browser.Keys.CONTROL, "a"]])
-      .keys('\ue003')
       //Correct email
       .setValue(elements.email, input.username)
       .assert.attributeContains(elements.email, 'aria-invalid', 'false',

@@ -3,7 +3,7 @@
 // These elements used because .clearValue is not worked properly
 
 module.exports = {
-  '@tags': ['all', 'login', 'negative'],
+  '@tags': ['all', 'login', 'negative', '1'],
 
   before: function(browser) {
     console.log('Setting up... browser', typeof browser);
@@ -15,7 +15,7 @@ module.exports = {
   },
 
   'Login Tests Negative': function(browser) {
-    const url = 'http://localhost:3000/';
+    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
     const elements = {
       email: "input[name='email']",
       password: "input[name='password']",
@@ -63,7 +63,7 @@ module.exports = {
       //Valid email and empty password
       .assert.attributeContains(elements.password, 'aria-invalid', 'true',
       'Password is required')
-      //Case Sensitive email
-      //Add later
+      //Case Sensitive email, need to add later, when its will be released
+     
   },
 };

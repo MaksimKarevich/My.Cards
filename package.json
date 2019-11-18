@@ -19,6 +19,7 @@
     "chai-nightwatch": "^0.3.0",
     "dotenv": "8.2.0",
     "ejs": "^2.7.1",
+    "faker": "^4.1.0",
     "lodash.clone": "4.5.0",
     "lodash.defaultsdeep": "^4.6.1",
     "lodash.merge": "^4.6.2",
