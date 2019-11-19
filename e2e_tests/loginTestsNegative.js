@@ -3,7 +3,7 @@
 // These elements used because .clearValue is not worked properly
 
 module.exports = {
-  '@tags': ['all', 'login', 'negative', '1'],
+  '@tags': ['all', 'login', 'negative'],
 
   before: function(browser) {
     console.log('Setting up... browser', typeof browser);

@@ -61,7 +61,7 @@ module.exports = {
       .setValue(elements.compName, ['', [browser.Keys.CONTROL, 'a']])
       .setValue(elements.compName, compName)
       .setValue(elements.compNum, ['', [browser.Keys.CONTROL, "a"]])
-      .setValue(elements.compNum, faker.random.number() * 2)
+      .setValue(elements.compNum, faker.random.number(987654321))
       .setValue(elements.compVat, ['', [browser.Keys.CONTROL, "a"]])
       .setValue(elements.compVat, faker.random.number())
       .setValue(elements.compAddress, ['', [browser.Keys.CONTROL, "a"]])
