@@ -15,7 +15,7 @@ module.exports = {
   },
 
   'Login Tests Negative': function(browser) {
-    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
+    const url = 'http://localhost:3000/';
     const elements = {
       email: "input[name='email']",
       password: "input[name='password']",

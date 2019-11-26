@@ -2,7 +2,7 @@
 //.keys('\ue003')
 // These elements used because .clearValue is not worked properly
 module.exports = {
-  '@tags': ['all', 'profile', 'positive'],
+  '@tags': ['all', 'profile', 'positive', '1'],
   before: function (browser) {
     console.log('Setting up... browser', typeof browser);
   },
@@ -15,7 +15,7 @@ module.exports = {
   'User profile Test': function (browser) {
     
     const input = {
-      username: 'testythetester88@gmail.com',
+      username: 'a@a.aa',
       password: 'Qwe123'
     };
     const elements = {
@@ -30,7 +30,7 @@ module.exports = {
       settingsBtn: 'a[href="/settings"]',
       messSuccess: '//span[contains(text(),\'Successfully saved changes!\')]',
     };
-    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
+    const url = 'http://localhost:3000/';
     const today = new Date().toLocaleString();
     const username = 'Test User ' + today;
     //Add Faker for random data
@@ -57,7 +57,7 @@ module.exports = {
       .setValue(elements.lastName, ['', [browser.Keys.CONTROL, "a"]])
       .setValue(elements.lastName, faker.name.lastName())
       .setValue(elements.phoneNumber, ['', [browser.Keys.CONTROL, "a"]])
-      .setValue(elements.phoneNumber, faker.phone.phoneNumber())
+      .setValue(elements.phoneNumber, '+12019379992')
       .useXpath()
       .click(elements.buttonSave)
       .waitForElementVisible(elements.messSuccess, 5000,

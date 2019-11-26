@@ -11,11 +11,11 @@ module.exports = {
 
   'Login Test Positive': function(browser) {
     const input = {
-      username: 'testythetester88@gmail.com',
+      username: 'a@a.aa',
       password: 'Qwe123'
     };
     
-    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
+    const url = 'http://localhost:3000/';
     const elements = {
       email: "input[name='email']",
       password: "input[name='password']",

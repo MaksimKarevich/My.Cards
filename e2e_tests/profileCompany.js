@@ -15,7 +15,7 @@ module.exports = {
   
   'Company profile Test': function (browser) {
     const input = {
-      username: 'testythetester88@gmail.com',
+      username: 'a@a.aa',
       password: 'Qwe123'
     };
     const elements = {
@@ -35,7 +35,7 @@ module.exports = {
       messSuccess: '//span[contains(text(),\'Successfully saved changes!\')]',
       tabCompany: 'button[class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"]',
     };
-    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
+    const url = 'http://localhost:3000/';
     const today = new Date().toLocaleString();
     const compName = 'Test Company ' + today;
     //Add Faker for random data
@@ -71,8 +71,7 @@ module.exports = {
       .setValue(elements.compCode, ['', [browser.Keys.CONTROL, "a"]])
       .setValue(elements.compCode, faker.address.zipCode())
       .useXpath()
-      // .click(elements.compCountry)
-      // .click('//body/div/div/div/main/div/div[3]/div/div[2]/div/form/div[2]/div/div[4]/div/div/div[2]/div[1]/div[*]')
+
       .click(elements.buttonSave)
       .waitForElementVisible(elements.messSuccess, 5000,
         'Company information successfully updated!')

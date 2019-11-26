@@ -15,10 +15,10 @@ module.exports = {
   
   'Forgot Password Test': function(browser) {
     const input = {
-      username: 'testythetester88@gmail.com',
+      username: 'a@a.aa',
     };
   
-    const url = 'http://cm-app-dev.eu-central-1.elasticbeanstalk.com/';
+    const url = 'http://localhost:3000/';
     const username = Date.now();
     const domain = '@domain.com';
     const elements = {
